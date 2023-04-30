@@ -11,7 +11,7 @@ api = Api(app)
 CORS(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@127.0.0.1:3306/capstone"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'inirahasia'
+app.config['SECRET_KEY] = 'whateveryouwant'
 db = SQLAlchemy(app)
 
 class Users(db.Model):
@@ -20,7 +20,6 @@ class Users(db.Model):
     lastname     = db.Column(db.String(30), nullable=False)
     email    = db.Column(db.String(64), unique=True, nullable=False)
     password = db.Column(db.String(128), nullable=False)
-    is_verified = db.Column(db.Boolean(1),nullable=False)
     createdAt = db.Column(db.Date)
     updatedAt = db.Column(db.Date)
 
