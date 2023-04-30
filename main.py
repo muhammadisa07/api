@@ -7,8 +7,7 @@ from datetime import datetime, timedelta
 import jwt
 
 app = Flask(__name__)
-app.config.SWAGGER_UI_OAUTH_APP_NAME = 'Crime Detection | Api '
-api = Api(app,title=app.config.SWAGGER_UI_OAUTH_APP_NAME)
+api = Api(app)
 CORS(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@127.0.0.1:3306/capstone"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
