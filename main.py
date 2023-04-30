@@ -20,6 +20,7 @@ class Users(db.Model):
     lastname     = db.Column(db.String(30), nullable=False)
     email    = db.Column(db.String(64), unique=True, nullable=False)
     password = db.Column(db.String(128), nullable=False)
+    is_verified = db.Boolean(db.Boolean, nullable=False)
     createdAt = db.Column(db.Date)
     updatedAt = db.Column(db.Date)
 
